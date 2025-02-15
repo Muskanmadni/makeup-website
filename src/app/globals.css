@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar{
+  border-bottom: solid 2px;
+  padding-bottom: 10px;
+  border: none;
+}
+.logo{
+  display: flex;
+  position: absolute;
+  font-size: 30px;
+  padding-left: 50px;
+  padding-top:20px ;
+  color: black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.checkbtn{
+  display: none;
+}
+#check{
+  display: none;
+}
+.buttons {
+
+  justify-content: flex-end;
+  display: flex; /* Add flexbox */
+  align-items: center; /* Align items vertically */
+  gap: 40px;
+  font-size: 20px;
+}
+
+.navbutton {
+  line-height: 80px;
+  margin: 0 5px;
+  display: inline-block;
+  color: black;
+}
+
+/* ... other styles ... */
+
+@media (max-width:768px ) and (min-width:480px) {
+  .buttons {
+    position: absolute;
+   
+    background-color: #494465;
+    top: 100px;
+    left: -100%; /* Initially off-screen */
+    text-align: center;
+    transition: all 0.3s ease-out;
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .navbutton {
+    display: block;
+    margin: 20px 0; /* Adjust margin as needed */
+    line-height: 30px;
+  }
+
+  #check:checked ~ .buttons {
+    left: 0;
+
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    line-height: 80px;
+    margin-right: 40px;
+    margin-top: 20px;
+    float: right;
+    cursor: pointer;
+    display:block;
+  }
+}
+
+
+/* hero section */
+.herosection{
+  width: 100%;
+  height:604px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+}
+.heroText{
+  width: 1190px;
+  height: 450px;
+  background-color: #2A254B;
+}
+.heroheading{
+  font-size: 30px;
+  font-weight: lighter;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+.herobutton{
+  border: none;
+  background-color: #494465;
+  color:#8e8a9f;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+.heroImage{
+  justify-items: end;
+
+
+}
+.hero-section-image{
+  display: block;
+  position: absolute;
+  bottom: 110px;
+  right: 200px;
+}
+/* hero-section responsive small mobile */
+@media (max-width:768px ) and (min-width:480px){
+  .hero-section-image{
+    display: none;
+  }
+}
+/* hero-section responsive small mobile */
+@media (max-width:1200px ) and (min-width:769px) {
+  .hero-section-image{
+    display: block;
+    position: absolute;
+    top: 215px;
+    right:200px;
+    width: 490px;
+    height: 450px;
+  }
+}
+/* hero-section responsive small mobile */
+@media (max-width:1240px ) and (min-width:1025px){
+  .hero-section-image{
+    display: flex;
+    position: absolute;
+    bottom: 24px;
+    right:0;
+  }
+}
+
+/* homepage branddetails card */
+.branddetailsards{
+  position: absolute;
+  top: 930px;
+  gap: 60px;
+
+}
+
+
+
+
+/* homeproduct listing */
+.homeListingCard{
+margin-top: 20px;
+justify-content: center;
+gap: 50px;
+border:none
+}
+.productlistbutton{
+  margin-left: 700px;
+  margin-top: 80px;
+  padding: 5px 30px;
+}
+
+/* popular products list and cards */
+.popular-product-list-cards{
+  justify-content: center;
+  display: flex;
+
+}
+
+.signupbutton{
+  border: solid none;
+  
+}
+.signupSection{
+  margin-left: 400px;
+  margin-top: 50px;
+
+}
+.newsletterText {
+  width: 1300px;
+  height: 500px;
+  background-color: white;
+}
+.newsletter-section{
+  width: 100%;
+  height:604px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+@media (max-width:768px ) and (min-width:480px){
+  .branddatils{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-left: 30px;
+  }
+
+  .newsletter-section{
+    margin-top: 600px;
+
+
+  }
+  .newsletterText{
+    text-align: center;
+  }
+  .newsheading{
+    font-size: 30px;
+  }
+  .signupSection{
+    margin-right: 680px; 
+  }
+
+  .popular-product-list-cards{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-top: 800px;
+
+  }
+  .homeListingCard{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+}
